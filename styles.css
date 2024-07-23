@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Roboto;
+    background-color: #F1F5F8;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15vh;
+}
+
+h1, .saver-text {
+    font-size: 6.45rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #102B42;
+    user-select: none;
+}
+
+.saver-text {
+    user-select: auto;
+    font-weight: 625;
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+
+.saver-text::selection, #saved-values::selection {
+    background-color: #102B42;
+    color: #F1F5F8;
+}
+
+p {
+    font-size: 12rem;
+    font-family: 'Open Sans';
+    font-weight: 550;
+    color: rgb(0, 0, 200);
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.75vw;
+}
+
+.decrease, .reset, .increase, .save, .clear {
+    font-family: Roboto;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    background: transparent;
+    height: 2.3rem;
+    border: 3.5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0.1px #BBBBBB;
+    cursor: pointer;
+}
+
+.reset {
+    min-width: 6.25vw;
+}
+
+button:not(.reset) {
+    min-width: 11vw;
+}
+
+.save {
+    width: 32vw;
+    background-color: rgb(0, 170, 0);
+    border-color: rgb(0, 127, 0);
+    color: #F1F5F8;
+}
+
+.clear {
+    width: 32vw;
+    background-color: rgb(200, 0, 0);
+    border-color: rgb(157, 0, 0);
+    color: #F1F5F8;
+}
+
+.decrease:hover, .reset:hover, .increase:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: #D0D3D6;
+}
+
+.save:hover, .clear:hover {
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    background-color: #D0D3D6;
+    border-color: #F1F5F8;
+    color: #102B42;
+}
+
+.decrease:active, .reset:active, .increase:active, .save:active, .clear:active {
+    transition: box-shadow 0.1s ease-in-out;
+    box-shadow: 0 0 0 2px #47A3E7;
+}
+
+.number::selection {
+    color: #F1F5F8;
+    background-color: rgb(0, 0, 200);
+}
+
+.green::selection {
+    color: #F1F5F8;
+    background-color: rgb(0, 160, 0);
+}
+
+.blue::selection {
+    color: #F1F5F8;
+    background-color: rgb(0, 0, 200);
+}
+
+.red::selection {
+    color: #F1F5F8;
+    background-color: rgb(200, 0, 0);
+}
